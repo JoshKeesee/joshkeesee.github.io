@@ -1,0 +1,67 @@
+.wallpaper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to bottom right, darkblue, blue, lightblue);
+  z-index: -1;
+}
+* {
+  font-family: "Verdana", sans-serif;
+}
+.title {
+  margin-top: 20%;
+  font-size: 500%;
+  color: white;
+  text-align: center;
+  font-family: "Brush Script MT", cursive;
+}
+.text {
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding-bottom: 500px;
+  padding-top: 5px;
+  text-align: center;
+}
+.scroll {
+  z-index: 10;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  height: 5vw;
+  width: 5vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+}
+.scroll:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+  cursor: pointer;
+}
+.link {
+  color: blue;
+  text-decoration: none;
+  font-size: 40px;
+  transition: 0.2s;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+}
+.link:hover {
+  border-radius: 20px;
+  padding: 10px;
+  background: rgba(211, 211, 211, 0.4);
+}
+html {
+  scroll-behavior: smooth;
+}
