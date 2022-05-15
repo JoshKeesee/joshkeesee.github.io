@@ -4,13 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link rel="icon" type="image/png" href="xicon.png"> 
+  <link rel="icon" type="image/png" href="xicon.png">
   <title>JoshKeesee's Homepage</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel='manifest' href='manifest.json'>
 </head>
 
 <body>
-  <center><h1 class='title' id='title'>Welcome to JoshKeesee's Homepage</h1></center>
+  <center>
+    <h1 class='title' id='title'>Welcome to JoshKeesee's Homepage</h1>
+  </center>
   <div class='wallpaper'></div>
   <div onclick='scrollDown()' class='scroll'></div>
   <div class='text'>
@@ -18,11 +21,12 @@
       About me
     </h1>
     <p>
-      I am a programmer who likes to create cool websites. I really have a passion for well designed websites and have always loved seeing all you can do to a website to make it super cool.
+      I am a programmer who likes to create cool websites. I really have a passion for well designed websites and have
+      always loved seeing all you can do to a website to make it super cool.
     </p>
     <hr>
     <h1>
-      Try out some of my websites!  
+      Try out some of my websites!
     </h1>
     <a class='link' href='https://joshkeesee.github.io/Duck-Clicker'>Duck Clicker</a>
     <br>
@@ -32,8 +36,20 @@
     <a class='link' href='https://joshkeesee.github.io/Minecraft-No-Way-Home'>Minecraft: No Way Home</a>
     <br>
     <label>A story created by friends</label>
-    </div>
-  <script src="script.js"></script>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('SW.js');
+      });
+    }
+  </script>
+  <script>
+    function scrollDown() {
+      document.body.scrollTop = 750;
+      document.documentElement.scrollTop = 750;
+    }
+  </script>
 </body>
 
 </html>
